@@ -4,12 +4,20 @@ import Movie from "../components/Movie";
 function Home() {
   const [loading, set_loading] = useState(true);
   const [movies, set_movies] = useState([]);
-  useEffect(()=> {
-    fetch("https://api.coinpaprika.com/v1/tickers")
-    .then((response) => response.json())
-    .then((json) => set_movies(json));
+  const get_Movies = async () => {
+    const json = await (
+        await fetch(
+            `https://yts.mx/api/v2/list_movies.json?minimum_rating=8.5&sort_by=year`
+        )
+    ).json();
+    set_movies(json.data.movies);
     set_loading(false);
-  }, [])
+  };
+  
+  useEffect(()=> {
+    get_Movies();
+  }, []);
+
   return (
     <div>
       {loading ? (
