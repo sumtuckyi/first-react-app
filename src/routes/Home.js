@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import Movie from "../components/Movie";
+import Nav from "../components/nav_bar";
 
 function Home() {
   const [loading, set_loading] = useState(true);
@@ -20,6 +21,7 @@ function Home() {
 
   return (
     <div>
+      <Nav />  
       {loading ? (
       <h1>Loading...</h1>
       ) : (
@@ -27,6 +29,7 @@ function Home() {
           {movies.map((movie) => (
             <Movie 
               key={movie.id}
+              id={movie.id}
               coverImg ={movie.medium_cover_image} 
               title={movie.title} 
               summary={movie.summary} 

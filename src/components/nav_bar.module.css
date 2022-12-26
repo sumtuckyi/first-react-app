@@ -1,0 +1,17 @@
+.bar {
+    display: flex;
+    font-weight: 700;
+    text-transform: uppercase;
+    padding: 1rem;
+    background-color:sandybrown;
+    border-radius: 7.5px;
+}
+
+.option {
+    padding: 10px 20px;
+    list-style: none;
+}
+
+.option:hover {
+    color:beige;
+}
