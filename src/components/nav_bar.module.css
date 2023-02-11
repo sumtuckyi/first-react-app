@@ -2,9 +2,10 @@
     display: flex;
     font-weight: 400;
     text-transform: uppercase;
-    padding: 1fr;
+    padding: 0px 1fr;
     background-color:rgb(234, 228, 228);
-    border-radius: 5px;
+    border-radius: 3px;
+    justify-content: flex-start;
 }
 
 .bar a {
@@ -12,10 +13,18 @@
 }
 
 .option {
-    padding: 15px 10px;
+    padding: 10px 30px;
     list-style: none;
+    color: black;
 }
 
 .option:hover {
     color:mintcream;
 }
+
+.input {
+    justify-self: flex-end;
+    height: 15px;
+    align-self: center;
+}
+
