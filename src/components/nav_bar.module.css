@@ -1,17 +1,21 @@
 .bar {
     display: flex;
-    font-weight: 700;
+    font-weight: 400;
     text-transform: uppercase;
-    padding: 1rem;
-    background-color:sandybrown;
-    border-radius: 7.5px;
+    padding: 1fr;
+    background-color:rgb(234, 228, 228);
+    border-radius: 5px;
+}
+
+.bar a {
+    text-decoration: none;
 }
 
 .option {
-    padding: 10px 20px;
+    padding: 15px 10px;
     list-style: none;
 }
 
 .option:hover {
-    color:beige;
+    color:mintcream;
 }

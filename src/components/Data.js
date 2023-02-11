@@ -1,14 +1,15 @@
 import PropTypes from "prop-types";
+import styles from "./Data.module.css";
 
 function Data({smallImg, title, lang, rating, runtime, description}) {
     return (
-        <div>
-            <img src={smallImg} alt={title} />
-            <h2>{title}</h2>
-            <h3>{`Language: ${lang}`}</h3>
-            <h3>{`Rating: ${rating}`}</h3>
-            <h3>{`Runtime: ${runtime} min`}</h3>
-            <p>{description}</p>
+        <div className={styles.container}>
+            <img src={smallImg} alt={title} className={styles.image} />
+            <h2 className={styles.title}>{title}</h2>
+            <h3 className={styles.info}>{`Language: ${lang}`}</h3>
+            <h3 className={styles.info}>{`Rating: ${rating}`}</h3>
+            <h3 className={styles.info}>{`Runtime: ${runtime} min`}</h3>
+            <p className={styles.summary}>{description}</p>
         </div>
     );
 };
